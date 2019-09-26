@@ -11,6 +11,11 @@ class Modal extends Component {
         return nextProps.show !== this.props.show;
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(prevProps);
+        console.log(this.props);
+    }
+
     render() {
         const { show, modalClosed, children } = this.props;
 
@@ -32,3 +37,26 @@ class Modal extends Component {
 }
 
 export default Modal;
+
+// const Modal = (props) => {
+//     return (
+//         <Aux>
+//             <Backdrop show={ props.show } clicked={ props.modalClosed } />
+//             <div
+//                 className={ classes.Modal }
+//                 style={{
+//                     transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
+//                     opacity: props.show ? '1' : '0'
+//                 }}
+//             >
+//                 { props.children }
+//             </div>
+//         </Aux>
+//     );
+// };
+//
+// const shouldComponentUpdate = (prevProps, nextProps) => {
+//     return prevProps.show !== nextProps.show;
+// };
+//
+// export default React.memo(Modal, shouldComponentUpdate);
