@@ -9,7 +9,7 @@ import classes from './Layout.scss';
 class Layout extends Component {
 
 	state = {
-		showSideDrawer: true,
+		showSideDrawer: false,
 	};
 
 	sideDrawerClosedHandler = () => {
