@@ -21,11 +21,13 @@ const withErrorHandler = ( Wrapped, axios ) => {
         };
 
         componentWillUnmount() {
+            console.log("mySecondBranch");
             console.log("conflict");
-            console.log("master");
+            console.log("after conf");
             axios.interceptors.request.eject(this.requestInterceptor);
             axios.interceptors.response.eject(this.responseInterceptor);
             console.log(31232133123213213213);
+            console.log(23423443423423432);
         }
 
         errorConfirmedHandler = () => {
