@@ -21,6 +21,7 @@ const withErrorHandler = ( Wrapped, axios ) => {
         };
 
         componentWillUnmount() {
+            console.log(1231312321312312);
             console.log("mySecondBranch");
             console.log("conflict");
             console.log("after conf");
