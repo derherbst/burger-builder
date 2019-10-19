@@ -26,6 +26,7 @@ const withErrorHandler = ( Wrapped, axios ) => {
             axios.interceptors.request.eject(this.requestInterceptor);
             axios.interceptors.response.eject(this.responseInterceptor);
             console.log(31232133123213213213);
+            console.log(23423443423423432);
         }
 
         errorConfirmedHandler = () => {
