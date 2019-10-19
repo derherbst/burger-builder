@@ -21,6 +21,7 @@ const withErrorHandler = ( Wrapped, axios ) => {
         };
 
         componentWillUnmount() {
+            console.log(12312312213);
             axios.interceptors.request.eject(this.requestInterceptor);
             axios.interceptors.response.eject(this.responseInterceptor);
         }
