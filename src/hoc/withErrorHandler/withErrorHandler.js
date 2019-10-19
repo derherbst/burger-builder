@@ -21,6 +21,7 @@ const withErrorHandler = ( Wrapped, axios ) => {
         };
 
         componentWillUnmount() {
+            console.log("mySecondBranch");
             console.log("conflict");
             console.log("after conf");
             axios.interceptors.request.eject(this.requestInterceptor);
